@@ -1,0 +1,7 @@
+websockets
+pandas
+numpy
+ta
+ujson
+flask
+scikit-learn
