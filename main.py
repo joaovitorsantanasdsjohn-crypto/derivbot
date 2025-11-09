@@ -11,7 +11,7 @@ from flask import Flask
 from indicators import calc_indicators
 from model import MLModel
 
-WS_URL = "wss://ws.derivws.com/websockets/v3"
+WS_URL = "WS_URL = "wss://ws.derivws.com/websockets/v3?app_id=1089"
 API_TOKEN = os.getenv("DERIV_TOKEN")  # DEFINA NO RENDER
 SYMBOLS = ["frxEURUSD","frxUSDCHF","frxGBPCHF","frxUSDJPY","BTCUSD"]
 AMOUNT = 1.0
