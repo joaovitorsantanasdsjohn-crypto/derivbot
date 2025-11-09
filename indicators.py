@@ -1,7 +1,6 @@
 import pandas as pd
 import ta
 
-
 def calc_indicators(df: pd.DataFrame):
     # df expected columns: open, high, low, close
     close = df['close'].astype(float)
@@ -17,5 +16,4 @@ def calc_indicators(df: pd.DataFrame):
         signal = "CALL"
     elif rsi > 70 and last_close >= upper:
         signal = "PUT"
-
     return signal, float(rsi), float(upper), float(lower)
