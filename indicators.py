@@ -23,16 +23,16 @@ def calc_indicators(df):
         high=df["high"], low=df["low"], close=df["close"], window=14
     ).adx().iloc[-1]
 
-    # Decision logic
+    # Decision logic (menos restritivo)
     signal = None
     close = df["close"].iloc[-1]
 
     if (
-        rsi > 55 and ema20 > ema50 and close > mid and adx > 20
+        rsi > 50 and ema20 >= ema50 and close >= mid and adx > 15
     ):
         signal = "CALL"
     elif (
-        rsi < 45 and ema20 < ema50 and close < mid and adx > 20
+        rsi < 50 and ema20 <= ema50 and close <= mid and adx > 15
     ):
         signal = "PUT"
 
